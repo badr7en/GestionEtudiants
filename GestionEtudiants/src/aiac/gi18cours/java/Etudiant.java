@@ -8,9 +8,14 @@ public class Etudiant {
 		this.id=A;
 		this.note=10.0;
 		this.nom=name;
-		}
+	}
 	public String toString() {
 		return "("+this.nom + ":"+ this.note+")";
-
-}
+	}
+	public boolean equals(Object obj) {
+		if (! (obj instanceof Etudiant) ){
+			return false;
+		}
+	return	((Etudiant)obj).id==this.id;
+	}
 }
